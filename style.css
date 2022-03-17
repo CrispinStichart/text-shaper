@@ -1,0 +1,135 @@
+body {
+    background: white;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin: 40px auto;
+    max-width: 720px;
+    padding: 0 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.mask{
+    position: relative;
+    overflow: hidden;
+    margin: 0px auto;
+    width: 100%;
+}
+.header{
+    float: left;
+    width: 100%;
+}
+.colleft{
+    position: relative;
+    width: 100%;
+    right: 50%;
+}
+.col2{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48.8%;
+    left: 100.6%;
+    border: 2px dashed #cccccc;
+    height: 10em;
+    color: #ccc;
+    font-size: 1.5em;
+    line-height: 10;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.col1{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 48.8%;
+    left: 1.7999999999999972%;
+    height: 10em;
+    border: 2px dashed #cccccc;
+}
+
+
+#imagePreview img {
+    display: block;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+#inputAndControls {
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+#input {
+    float: left;
+    padding-top: 0px;
+    max-width: 400px;
+}
+
+#controls {
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#output {
+    padding-top: 10px;
+    font-family: monospace, Monospaced;
+    white-space: pre;
+}
+
+textarea {
+    width: 400px;
+    height: 14em;
+}
+
+.row {
+    margin: 20px 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.cell {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.image img {
+    display: block;
+    max-width: 100%;
+}
+
+.color {
+    padding: 0 0 0 20px;
+}
+
+.color ul {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.box {
+    height: 80px;
+}
+
+#footer {
+    margin: 40px 0;
+    text-align: center;
+}
