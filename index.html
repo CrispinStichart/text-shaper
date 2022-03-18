@@ -57,18 +57,20 @@
                 If you set both to 1, each character in the text will map directly to each pixel
                 in the input image. Monospace characters are roughly twice as tall as they are wide, so
                 that's a good starting point. </p>
-            <div>
-                <label for="height">Char Height</label>
-                <input id="height" type="number" value="16">
-            </div>
-            <div>
-                <label for="width">Char Width</label>
-                <input id="width" type="number" value="8">
-            </div>
-            <div>
-                <label for="keepSpaces">Keep Spaces</label>
-                <input id="keepSpaces" type="checkbox" checked="checked">
-            </div>
+            <form class="table">
+                <div>
+                    <label for="height">Char Height</label>
+                    <input id="height" type="number" value="16">
+                </div>
+                <div>
+                    <label for="width">Char Width</label>
+                    <input id="width" type="number" value="8">
+                </div>
+                <div>
+                    <label for="keepSpaces">Keep Spaces</label>
+                    <input id="keepSpaces" type="checkbox" checked="checked">
+                </div>
+            </form>
             <div class="spacer"></div>
             <button onclick=generateText() type=button>Generate</button>
         </div>
