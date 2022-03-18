@@ -14,14 +14,6 @@ h1 {
     text-align: center;
 }
 
-.mask {
-    border: 1px dashed gray;
-    /*position: relative;*/
-    /*overflow: hidden;*/
-    /*margin: 0px auto;*/
-    /*width: 100%;*/
-}
-
 .header {
     float: left;
     width: 100%;
