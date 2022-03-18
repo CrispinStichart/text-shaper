@@ -9,7 +9,7 @@
 
 <body>
 <h1>Text Shaper</h1>
-<p>Client-side JavaScript application to format a block of text to an image. Drag and drop the file below, or
+<p>Client-side JavaScript application to format a block of text to an image. Drag and drop an image onto this page, or
     experiment with the built-in examples. Image must be a .png with transparency where you don't want text to
     appear.</p>
 
@@ -53,10 +53,11 @@
         <textarea id="textInput">Your Text Goes Here</textarea>
 
         <div id="controls" class="vertical-container">
-            <p>The height and width is how many pixels make up a character in the output.
+            <div>The height and width is how many pixels make up a character in the output.
                 If you set both to 1, each character in the text will map directly to each pixel
                 in the input image. Monospace characters are roughly twice as tall as they are wide, so
-                that's a good starting point. </p>
+                that's a good starting point.
+            </div>
             <form class="table">
                 <div>
                     <label for="height">Char Height</label>
