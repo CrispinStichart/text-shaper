@@ -2,70 +2,80 @@
 <html>
 
 <head>
-    <title>Image to Text</title>
+    <title>Text Shaper</title>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <h1>Image to Text</h1>
-    <p>Client-side JavaScript application to format a block of text to an image. Drag and drop the file below, or
-        experiment with the built-in examples. Image must be a .png with transparency where you don't want text to
-        appear.</p>
+<h1>Text Shaper</h1>
+<p>Client-side JavaScript application to format a block of text to an image. Drag and drop the file below, or
+    experiment with the built-in examples. Image must be a .png with transparency where you don't want text to
+    appear.</p>
 
-    <p>Built off of Matthias Klein's <a href="http://matkl.github.io/average-color/">Average Color detector.</a></p>
+<div class="horizontal-container">
+    <div class="vertical-container centered">
+        <div class="horizontal-radio">
+            <form action="">
+                <input type="radio" name="example" value="circle" onclick="setPreviewImg('circle')">
+                Circle
+                <input type="radio" name="example" value="eagle" onclick="setPreviewImg('eagle')">
+                Eagle
+                <input id="userRadioImg" type="radio" name="example" value="user" onclick="setPreviewImg('user')">
+                User
+            </form>
+        </div>
 
-    <form action="">
-        <input type="radio" name="example" value="circle" onclick="setPreviewImg('circle')">
-        Circle
-        <input type="radio" name="example" value="eagle" onclick="setPreviewImg('eagle')">
-        Eagle
-        <input id="userRadioImg" type="radio" name="example" value="user" onclick="setPreviewImg('user')">
-        User
-    </form>
-
-    <div class="mask">
-        <div id="previewAndDrop" class="colleft">
-            <div id='imageDropArea' class="col2">
-                Drop Images here<br />
-            </div>
-
-            <div id="imagePreview" class="col1">
-                <img src="example-images/preview.png" id="imgPreview" />
-            </div>
+        <div id="imagePreview">
+            <img src="example-images/preview.png" id="imgPreview"/>
         </div>
     </div>
 
-    <div id="inputAndControls" class=clearfix>
-        <div id="input">
+</div>
+
+<div id="radioAndInputControls">
+
+    <div class="horizontal-radio">
+        <label>
             <input type="radio" name="text" value="lorem" onclick="setText('lorem')">
-            Lorem Ipsum
+        </label>
+        Lorem Ipsum
+        <label>
             <input type="radio" name="text" value="freedom" onclick="setText('declaration')">
-            Freedom
-            <input id="userRadioText" type="radio" name="text" value="user" onclick="setText('user')" checked="checked">
-            User
-            <textarea id="textinput">Your Text Goes Here</textarea>
-        </div>
+        </label>
+        Freedom
+        <label for="userRadioText"></label><input id="userRadioText" type="radio" name="text" value="user"
+                                                  onclick="setText('user')" checked="checked">
+        User
+    </div>
+
+    <div id="inputAndControls" class="horizontal-container">
+        <textarea id="textInput">Your Text Goes Here</textarea>
 
         <div id="controls">
-            Char Height
-            <input id="height" type="number" value="16">
-            <br />Char yWidth
-            <input id="width" type="number" value="8">
-            <!--<br /> Font Size-->
-            <!--<input id="fontSize" type="number" value="12">-->
-            <br />Keep Spaces
-            <input id="keepSpaces" type="checkbox" checked="checked">
-            <br />
+            <div>
+                <label for="height">Char Height</label>
+                <input id="height" type="number" value="16">
+            </div>
+            <div>
+                <label for="width">Char Width</label>
+                <input id="width" type="number" value="8">
+            </div>
+            <div>
+                <label for="keepSpaces">Keep Spaces</label>
+                <input id="keepSpaces" type="checkbox" checked="checked">
+            </div>
+            <div class="spacer"></div>
             <button onclick=generateText() type=button>Generate</button>
         </div>
     </div>
+</div>
 
-    <div id="output">
-    </div>
-    <div id='images'></div>
-    <script src='controller.js'></script>
-    <script src='shaper.js'></script>
+<div id="output">
+</div>
+
+<script src='controller.js'></script>
+<script src='shaper.js'></script>
 </body>
 
 </html>
