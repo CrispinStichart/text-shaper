@@ -7,6 +7,7 @@ body {
     padding: 0 40px;
 }
 
+
 h1 {
     font-size: 2.5em;
     font-weight: 300;
@@ -36,19 +37,17 @@ h1 {
 }
 
 #radioAndInputControls {
-    display: flex;
-    flex-direction: column;
+
 }
 
 #inputAndControls {
-
+    /*max-width: 300px;*/
 }
 
 #textInput {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 2;
+    flex-grow: 100;
     min-height: 20em;
+    min-width: 30em;
 }
 
 .spacer {
@@ -74,7 +73,6 @@ h1 {
 }
 
 textarea {
-    flex-grow: 100;
 }
 
 .horizontal-container {
@@ -83,6 +81,11 @@ textarea {
     align-items: stretch;
     justify-content: space-between;
 }
+
+.wrap {
+    flex-wrap: wrap;
+}
+
 
 .vertical-container {
     display: flex;
