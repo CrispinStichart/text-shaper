@@ -13,76 +13,59 @@ h1 {
     text-align: center;
 }
 
-.mask{
-    position: relative;
-    overflow: hidden;
-    margin: 0px auto;
-    width: 100%;
-}
-.header{
-    float: left;
-    width: 100%;
-}
-.colleft{
-    position: relative;
-    width: 100%;
-    right: 50%;
-}
-.col2{
-    position: relative;
-    overflow: hidden;
-    float: left;
-    width: 48.8%;
-    left: 100.6%;
-    border: 2px dashed #cccccc;
-    height: 10em;
-    color: #ccc;
-    font-size: 1.5em;
-    line-height: 10;
-    text-align: center;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.col1{
-    position: relative;
-    overflow: hidden;
-    float: left;
-    width: 48.8%;
-    left: 1.7999999999999972%;
-    height: 10em;
-    border: 2px dashed #cccccc;
+.mask {
+    border: 1px dashed gray;
+    /*position: relative;*/
+    /*overflow: hidden;*/
+    /*margin: 0px auto;*/
+    /*width: 100%;*/
 }
 
+.header {
+    float: left;
+    width: 100%;
+}
+
+.centered {
+    margin: auto;
+}
 
 #imagePreview img {
-    display: block;
-    margin: auto;
-    max-height: 100%;
-    max-width: 100%;
-}
-#inputAndControls {
-    overflow: hidden;
-    padding-top: 10px;
+    max-height: 10em;
+    /*max-width: 50%;*/
 }
 
-#input {
-    float: left;
-    padding-top: 0px;
-    max-width: 400px;
+#radioAndInputControls {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputAndControls {
+
+}
+
+#textInput {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    min-height: 20em;
+}
+
+.spacer {
+    flex-grow: 100;
 }
 
 #controls {
-    padding-left: 10px;
-    overflow: hidden;
+    /*padding: 20px;*/
+    display: flex;
+    flex-direction: column;
 }
 
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+#controls > button {
+    width: 100%;
+    font-size: 200%;
 }
+
 
 #output {
     padding-top: 10px;
@@ -91,27 +74,28 @@ h1 {
 }
 
 textarea {
-    width: 400px;
-    height: 14em;
+    flex-grow: 100;
 }
 
-.row {
-    margin: 20px 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+.horizontal-container {
     display: flex;
+    gap: 15px;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
-.cell {
-    box-sizing: border-box;
-    width: 50%;
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+
 }
 
 .image img {
     display: block;
     max-width: 100%;
+
 }
 
 .color {
@@ -133,3 +117,9 @@ textarea {
     margin: 40px 0;
     text-align: center;
 }
+
+/*.clearfix::after {*/
+/*    content: "";*/
+/*    clear: both;*/
+/*    display: table;*/
+/*}*/
